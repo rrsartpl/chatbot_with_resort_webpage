@@ -1,5 +1,5 @@
 {
-  "name": "resort",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +7,7 @@
     "contentful": "^7.5.0",
     "dialogflow": "^1.2.0",
     "express": "^4.17.3",
+    "nodemon": "^2.0.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.6.1",
@@ -16,15 +17,15 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "backend": "nodemon index.js",
-    "frontend": "npm run start --prefix client",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev":"concurrently \"npm run backend\" \"npm run frontend\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -38,16 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "engines": {
-    "node": "16.3.0",
-    "npm": "8.3.0"
-  },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "concurrently": "^7.0.0",
-    "nodemon": "^2.0.15"
+    "http-proxy-middleware": "^2.0.3"
   }
 }
