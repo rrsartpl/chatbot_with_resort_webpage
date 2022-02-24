@@ -18,8 +18,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/rooms/" component={Rooms} />
-        <Chatbot/>
         <Route exact path="/rooms/:slug" component={SingleRoom} />
+        <Chatbot/>
         <Route component={Error} />
       </Switch>
     </>
